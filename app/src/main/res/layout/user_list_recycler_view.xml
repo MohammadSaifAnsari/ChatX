@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userProfileImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/user_img_background"
+        android:src="@drawable/baseline_person"
+        app:shapeAppearance="@style/Circular"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"></com.google.android.material.imageview.ShapeableImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/userListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/lastMess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:singleLine="true"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

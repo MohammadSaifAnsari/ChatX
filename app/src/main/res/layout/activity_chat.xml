@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#03aeda"
+        android:id="@+id/message_tool"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:id="@+id/backspaceMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/prim"
+            android:contentDescription="Back Img"
+            android:src="@drawable/baseline_backspace"
+            tools:ignore="TouchTargetSizeCheck"></ImageButton>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userImg1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/user_img_background"
+            android:src="@drawable/baseline_person"
+            android:contentDescription="User Img"
+            app:shapeAppearance="@style/Circular"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"></com.google.android.material.imageview.ShapeableImageView>
+
+        <TextView
+            android:id="@+id/userName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="User Name"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_tool"
+        android:layout_above="@+id/ll3"></androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:padding="4dp">
+
+        <EditText
+            android:id="@+id/messageET"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/send_message_shape"
+            android:hint="Message"
+            android:inputType="textMultiLine"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/sendButton"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"></EditText>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/send_buttton_background"
+            android:src="@drawable/baseline_send"
+            android:padding="1dp"
+            android:contentDescription="Send Button"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="3dp"></ImageButton>
+    </RelativeLayout>
+
+</RelativeLayout>

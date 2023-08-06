@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#03aeda"
+        android:id="@+id/message_tool1"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageButton
+            android:id="@+id/backspaceMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/prim"
+            android:contentDescription="back button"
+            android:src="@drawable/baseline_backspace"
+            tools:ignore="TouchTargetSizeCheck"></ImageButton>
+
+        <TextView
+            android:id="@+id/userName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Profile"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/cameraMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/prim"
+            android:layout_gravity="end"
+            android:contentDescription="camera button"
+            android:src="@drawable/baseline_camera"
+            tools:ignore="TouchTargetSizeCheck"></ImageButton>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userProfImg"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:background="@drawable/user_img_background"
+            android:contentDescription="user profile img button"
+            android:adjustViewBounds="true"
+            app:shapeAppearance="@style/Circular"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"></com.google.android.material.imageview.ShapeableImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name:"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"></TextView>
+
+            <EditText
+                android:id="@+id/userProfName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="         About:"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"></TextView>
+
+            <EditText
+                android:id="@+id/userProfAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:minHeight="48dp"
+                tools:ignore="SpeakableTextPresentCheck"></EditText>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp">
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_margin="3dp"
+                android:layout_alignParentRight="true"></Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
